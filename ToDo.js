@@ -63,7 +63,7 @@ function agregarTarea(tareas) {
         console.error("ERROR: La fecha de vencimiento no puede ser anterior a la fecha de creación. Por favor, ingrese una fecha válida.");
         fechaVencimientoTexto = prompt("Ingrese la fecha de vencimiento de la tarea (D/M/A):");
     }
-    //Tamb lo hizo la IA 
+    //Lo hizo la IA 
     let fechaVencimiento = fechaVencimientoTexto ? new Date(fechaVencimientoTexto) : null;
 
     let dificultad = prompt("Ingrese la dificultad de la tarea ([*]facil, [**]medio, [***]dificil):");
@@ -188,7 +188,7 @@ function modificarTarea(tareas, titulo) {
         if (nuevoEstado !== null && nuevoEstado !== "") {
             tarea.estado = nuevoEstado;
         }
-        const nuevaFechaVencimiento = prompt("Ingrese la nueva fecha de vencimiento de la tarea (AAAA-MM-DD, deje en blanco para no modificar):");
+        const nuevaFechaVencimiento = prompt("Ingrese la nueva fecha de vencimiento de la tarea (D/M/A, deje en blanco para no modificar):");
         if (nuevaFechaVencimiento !== null && nuevaFechaVencimiento !== "") {
             tarea.fechaVencimiento = new Date(nuevaFechaVencimiento);
         }
